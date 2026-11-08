@@ -1,0 +1,43 @@
+loaded: 56588
+train: 45270
+test: 11318
+words (columns): 194427
+accuracy: 0.8298
+macro F1: 0.7988
+
+                      precision    recall  f1-score   support
+
+       Accessibility      0.797     0.696     0.743       299
+            Graphics      0.819     0.824     0.821      2515
+               Media      0.828     0.805     0.816      1080
+          Networking      0.737     0.737     0.737       938
+         Performance      0.658     0.731     0.693       376
+Security and Privacy      0.813     0.775     0.793       912
+    Storage and Data      0.927     0.905     0.916       336
+      User Interface      0.867     0.877     0.872      4862
+
+            accuracy                          0.830     11318
+           macro avg      0.805     0.794     0.799     11318
+        weighted avg      0.830     0.830     0.830     11318
+
+confusion matrix (rows = real category, columns = predicted category):
+                      Accessibility  Graphics  Media  Networking  Performance  Security and Privacy  Storage and Data  User Interface
+Accessibility                   208        25      4           4            1                     2                 1              54
+Graphics                         10      2072     63          38           46                    21                 4             261
+Media                             2        76    869          30           16                    12                 0              75
+Networking                        4        47     24         691           17                    46                 0             109
+Performance                       3        30      4           8          275                     7                 0              49
+Security and Privacy              1        36     14          50           11                   707                 2              91
+Storage and Data                  1         6      1           3            3                     1               304              17
+User Interface                   32       239     71         114           49                    74                17            4266
+
+Accessibility: accessibility, ctw, voiceover, accessible, aria, accessible tests, nvda, vo, login page, role, intermittent accessible, intermittent assertionerror, broken cursor, jaws, nsaccessibilityservice
+Graphics: webgpu, pdf, xfa, webgl, webrender, svg, font, gfx, gpu, css, canvas, pdfs, avif, wgpu, wr
+Media: audio, webrtc, autoplay, gmp, media, video, dom media, sound, microphone, webcam, widevine, mp, camera, videos, libwebrtc
+Networking: netwerk, webtransport, netmonitor, network, websockets, dns, websocket, imap, xhr, proxy, trr, neqo, doh, internet, fetch
+Performance: browsertime, raptor, ram, memory, perfdocs, performance, processes, numbers, timing, perfherder, mozperftest, compare, test bug, profiler, backfill
+Security and Privacy: etp, openpgp, certificate, certificates, cert, csp, oauth, encrypted, hsts, security, sandbox, pgp, mime, partitioning, resistfingerprinting
+Storage and Data: indexeddb, carddav, contact, autofill, contacts, ldap, vcard, addressbook, idbtransaction, megalist, address, cards, getquotaobjectforfile, credit, formautofill
+User Interface: debugger, wayland, folders, proton, inspector, bookmark, folder, bfcache, bookmarks, widget, urlbar, welcome, breakpoints, base test, theme
+
+saved: /home/eldian/Documents/DA_BugBucket/bow_model.joblib /home/eldian/Documents/DA_BugBucket/bow_vectorizer.joblib
